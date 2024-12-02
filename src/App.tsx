@@ -62,7 +62,7 @@ function App() {
 
       <footer className="bg-white border-t mt-12">
         <div className="max-w-7xl mx-auto px-4 py-6 text-sm text-gray-600">
-          <p>Press the Compose key followed by the sequence to type special characters.</p>
+          <p className="text-center">Press the Compose key followed by the sequence to type special characters. © 2024 <a href="https://github.com/eosdev-x" className="text-blue-600">eosdev</a></p>
         </div>
       </footer>
     </div>
