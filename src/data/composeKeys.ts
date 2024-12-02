@@ -11,7 +11,7 @@ const createCategory = (name: string, keys: any[]): Category => ({
 });
 
 export const categories: Category[] = [
-  createCategory('Letters with Accents', [
+  createCategory('A', [
     // A letters
     { unicode: 'U00c0', char: 'À', alternatives: ['`A'], description: 'LATIN CAPITAL LETTER A WITH GRAVE' },
     { unicode: 'U00c1', char: 'Á', alternatives: ["'A"], description: 'LATIN CAPITAL LETTER A WITH ACUTE' },
@@ -33,8 +33,8 @@ export const categories: Category[] = [
     { unicode: 'U0103', char: 'ă', alternatives: ['Ua', 'ba'], description: 'LATIN SMALL LETTER A WITH BREVE' },
     { unicode: 'U0104', char: 'Ą', alternatives: [';A'], description: 'LATIN CAPITAL LETTER A WITH OGONEK' },
     { unicode: 'U0105', char: 'ą', alternatives: [';a'], description: 'LATIN SMALL LETTER A WITH OGONEK' },
-
-    // C letters
+  ]),
+  createCategory('C', [
     { unicode: 'U00c7', char: 'Ç', alternatives: [',C'], description: 'LATIN CAPITAL LETTER C WITH CEDILLA' },
     { unicode: 'U00e7', char: 'ç', alternatives: [',c'], description: 'LATIN SMALL LETTER C WITH CEDILLA' },
     { unicode: 'U0106', char: 'Ć', alternatives: ["'C"], description: 'LATIN CAPITAL LETTER C WITH ACUTE' },
@@ -43,16 +43,16 @@ export const categories: Category[] = [
     { unicode: 'U0109', char: 'ĉ', alternatives: ['^c'], description: 'LATIN SMALL LETTER C WITH CIRCUMFLEX' },
     { unicode: 'U010c', char: 'Č', alternatives: ['cC'], description: 'LATIN CAPITAL LETTER C WITH CARON' },
     { unicode: 'U010d', char: 'č', alternatives: ['cc'], description: 'LATIN SMALL LETTER C WITH CARON' },
-
-    // D letters
+  ]),
+  createCategory('D', [
     { unicode: 'U010e', char: 'Ď', alternatives: ['cD'], description: 'LATIN CAPITAL LETTER D WITH CARON' },
     { unicode: 'U010f', char: 'ď', alternatives: ['cd'], description: 'LATIN SMALL LETTER D WITH CARON' },
     { unicode: 'U0110', char: 'Đ', alternatives: ['-D', '/D'], description: 'LATIN CAPITAL LETTER D WITH STROKE' },
     { unicode: 'U0111', char: 'đ', alternatives: ['-d', '/d'], description: 'LATIN SMALL LETTER D WITH STROKE' },
     { unicode: 'U00d0', char: 'Ð', alternatives: ['DH'], description: 'LATIN CAPITAL LETTER ETH' },
     { unicode: 'U00f0', char: 'ð', alternatives: ['dh'], description: 'LATIN SMALL LETTER ETH' },
-
-    // E letters
+  ]),
+  createCategory('E', [
     { unicode: 'U00c8', char: 'È', alternatives: ['`E'], description: 'LATIN CAPITAL LETTER E WITH GRAVE' },
     { unicode: 'U00c9', char: 'É', alternatives: ["'E"], description: 'LATIN CAPITAL LETTER E WITH ACUTE' },
     { unicode: 'U00ca', char: 'Ê', alternatives: ['^E'], description: 'LATIN CAPITAL LETTER E WITH CIRCUMFLEX' },
@@ -73,8 +73,8 @@ export const categories: Category[] = [
     { unicode: 'U0229', char: 'ȩ', alternatives: [',e'], description: 'LATIN SMALL LETTER E WITH CEDILLA' },
     { unicode: 'U1ebc', char: 'Ẽ', alternatives: ['~E'], description: 'LATIN CAPITAL LETTER E WITH TILDE' },
     { unicode: 'U1ebd', char: 'ẽ', alternatives: ['~e'], description: 'LATIN SMALL LETTER E WITH TILDE' },
-
-    // G letters
+  ]),
+  createCategory('G', [
     { unicode: 'U011c', char: 'Ĝ', alternatives: ['^G'], description: 'LATIN CAPITAL LETTER G WITH CIRCUMFLEX' },
     { unicode: 'U011d', char: 'ĝ', alternatives: ['^g'], description: 'LATIN SMALL LETTER G WITH CIRCUMFLEX' },
     { unicode: 'U011e', char: 'Ğ', alternatives: ['UG', 'bG'], description: 'LATIN CAPITAL LETTER G WITH BREVE' },
@@ -89,8 +89,8 @@ export const categories: Category[] = [
     { unicode: 'U01f5', char: 'ǵ', alternatives: ["'g"], description: 'LATIN SMALL LETTER G WITH ACUTE' },
     { unicode: 'U1e20', char: 'Ḡ', alternatives: ['_G'], description: 'LATIN CAPITAL LETTER G WITH MACRON' },
     { unicode: 'U1e21', char: 'ḡ', alternatives: ['_g'], description: 'LATIN SMALL LETTER G WITH MACRON' },
-
-    // H letters
+  ]),
+  createCategory('H', [
     { unicode: 'U0124', char: 'Ĥ', alternatives: ['^H'], description: 'LATIN CAPITAL LETTER H WITH CIRCUMFLEX' },
     { unicode: 'U0125', char: 'ĥ', alternatives: ['^h'], description: 'LATIN SMALL LETTER H WITH CIRCUMFLEX' },
     { unicode: 'U0126', char: 'Ħ', alternatives: ['/H'], description: 'LATIN CAPITAL LETTER H WITH STROKE' },
@@ -101,8 +101,8 @@ export const categories: Category[] = [
     { unicode: 'U1e27', char: 'ḧ', alternatives: ['"h'], description: 'LATIN SMALL LETTER H WITH DIAERESIS' },
     { unicode: 'U1e28', char: 'Ḩ', alternatives: [',H'], description: 'LATIN CAPITAL LETTER H WITH CEDILLA' },
     { unicode: 'U1e29', char: 'ḩ', alternatives: [',h'], description: 'LATIN SMALL LETTER H WITH CEDILLA' },
-
-    // I letters
+  ]),
+  createCategory('I', [
     { unicode: 'U00cc', char: 'Ì', alternatives: ['`I'], description: 'LATIN CAPITAL LETTER I WITH GRAVE' },
     { unicode: 'U00cd', char: 'Í', alternatives: ["'I"], description: 'LATIN CAPITAL LETTER I WITH ACUTE' },
     { unicode: 'U00ce', char: 'Î', alternatives: ['^I'], description: 'LATIN CAPITAL LETTER I WITH CIRCUMFLEX' },
@@ -122,13 +122,13 @@ export const categories: Category[] = [
     { unicode: 'U0131', char: 'ı', alternatives: ['i.'], description: 'LATIN SMALL LETTER DOTLESS I' },
     { unicode: 'U01cf', char: 'Ǐ', alternatives: ['cI'], description: 'LATIN CAPITAL LETTER I WITH CARON' },
     { unicode: 'U01d0', char: 'ǐ', alternatives: ['ci'], description: 'LATIN SMALL LETTER I WITH CARON' },
-
-    // J letters
+  ]),
+  createCategory('J', [
     { unicode: 'U0134', char: 'Ĵ', alternatives: ['^J'], description: 'LATIN CAPITAL LETTER J WITH CIRCUMFLEX' },
     { unicode: 'U0135', char: 'ĵ', alternatives: ['^j'], description: 'LATIN SMALL LETTER J WITH CIRCUMFLEX' },
     { unicode: 'U01f0', char: 'ǰ', alternatives: ['cj'], description: 'LATIN SMALL LETTER J WITH CARON' },
-
-    // K letters
+  ]),
+  createCategory('K', [
     { unicode: 'U0136', char: 'Ķ', alternatives: [',K'], description: 'LATIN CAPITAL LETTER K WITH CEDILLA' },
     { unicode: 'U0137', char: 'ķ', alternatives: [',k'], description: 'LATIN SMALL LETTER K WITH CEDILLA' },
     { unicode: 'U0138', char: 'ĸ', alternatives: ['kk'], description: 'LATIN SMALL LETTER KRA' },
@@ -136,8 +136,8 @@ export const categories: Category[] = [
     { unicode: 'U01e9', char: 'ǩ', alternatives: ['ck'], description: 'LATIN SMALL LETTER K WITH CARON' },
     { unicode: 'U1e30', char: 'Ḱ', alternatives: ["'K"], description: 'LATIN CAPITAL LETTER K WITH ACUTE' },
     { unicode: 'U1e31', char: 'ḱ', alternatives: ["'k"], description: 'LATIN SMALL LETTER K WITH ACUTE' },
-
-    // L letters
+  ]),
+  createCategory('L', [
     { unicode: 'U0139', char: 'Ĺ', alternatives: ["'L"], description: 'LATIN CAPITAL LETTER L WITH ACUTE' },
     { unicode: 'U013a', char: 'ĺ', alternatives: ["'l"], description: 'LATIN SMALL LETTER L WITH ACUTE' },
     { unicode: 'U013b', char: 'Ļ', alternatives: [',L'], description: 'LATIN CAPITAL LETTER L WITH CEDILLA' },
@@ -146,12 +146,12 @@ export const categories: Category[] = [
     { unicode: 'U013e', char: 'ľ', alternatives: ['cl'], description: 'LATIN SMALL LETTER L WITH CARON' },
     { unicode: 'U0141', char: 'Ł', alternatives: ['/L'], description: 'LATIN CAPITAL LETTER L WITH STROKE' },
     { unicode: 'U0142', char: 'ł', alternatives: ['/l'], description: 'LATIN SMALL LETTER L WITH STROKE' },
-
-    // M letters
+  ]),
+  createCategory('M', [
     { unicode: 'U1e3e', char: 'Ḿ', alternatives: ["'M"], description: 'LATIN CAPITAL LETTER M WITH ACUTE' },
     { unicode: 'U1e3f', char: 'ḿ', alternatives: ["'m"], description: 'LATIN SMALL LETTER M WITH ACUTE' },
-
-    // N letters
+  ]),
+  createCategory('N', [
     { unicode: 'U00d1', char: 'Ñ', alternatives: ['~N'], description: 'LATIN CAPITAL LETTER N WITH TILDE' },
     { unicode: 'U00f1', char: 'ñ', alternatives: ['~n'], description: 'LATIN SMALL LETTER N WITH TILDE' },
     { unicode: 'U0143', char: 'Ń', alternatives: ["'N"], description: 'LATIN CAPITAL LETTER N WITH ACUTE' },
@@ -164,8 +164,8 @@ export const categories: Category[] = [
     { unicode: 'U014b', char: 'ŋ', alternatives: ['ng'], description: 'LATIN SMALL LETTER ENG' },
     { unicode: 'U01f8', char: 'Ǹ', alternatives: ['`N'], description: 'LATIN CAPITAL LETTER N WITH GRAVE' },
     { unicode: 'U01f9', char: 'ǹ', alternatives: ['`n'], description: 'LATIN SMALL LETTER N WITH GRAVE' },
-
-    // O letters
+  ]),
+  createCategory('O', [
     { unicode: 'U00d2', char: 'Ò', alternatives: ['`O'], description: 'LATIN CAPITAL LETTER O WITH GRAVE' },
     { unicode: 'U00d3', char: 'Ó', alternatives: ["'O"], description: 'LATIN CAPITAL LETTER O WITH ACUTE' },
     { unicode: 'U00d4', char: 'Ô', alternatives: ['^O'], description: 'LATIN CAPITAL LETTER O WITH CIRCUMFLEX' },
@@ -190,20 +190,20 @@ export const categories: Category[] = [
     { unicode: 'U01d2', char: 'ǒ', alternatives: ['co'], description: 'LATIN SMALL LETTER O WITH CARON' },
     { unicode: 'U01ea', char: 'Ǫ', alternatives: [';O'], description: 'LATIN CAPITAL LETTER O WITH OGONEK' },
     { unicode: 'U01eb', char: 'ǫ', alternatives: [';o'], description: 'LATIN SMALL LETTER O WITH OGONEK' },
-
-    // P letters
+  ]),
+  createCategory('P', [
     { unicode: 'U1e54', char: 'Ṕ', alternatives: ["'P"], description: 'LATIN CAPITAL LETTER P WITH ACUTE' },
     { unicode: 'U1e55', char: 'ṕ', alternatives: ["'p"], description: 'LATIN SMALL LETTER P WITH ACUTE' },
-
-    // R letters
+  ]),
+  createCategory('R', [
     { unicode: 'U0154', char: 'Ŕ', alternatives: ["'R"], description: 'LATIN CAPITAL LETTER R WITH ACUTE' },
     { unicode: 'U0155', char: 'ŕ', alternatives: ["'r"], description: 'LATIN SMALL LETTER R WITH ACUTE' },
     { unicode: 'U0156', char: 'Ŗ', alternatives: [',R'], description: 'LATIN CAPITAL LETTER R WITH CEDILLA' },
     { unicode: 'U0157', char: 'ŗ', alternatives: [',r'], description: 'LATIN SMALL LETTER R WITH CEDILLA' },
     { unicode: 'U0158', char: 'Ř', alternatives: ['cR'], description: 'LATIN CAPITAL LETTER R WITH CARON' },
     { unicode: 'U0159', char: 'ř', alternatives: ['cr'], description: 'LATIN SMALL LETTER R WITH CARON' },
-
-    // S letters
+  ]),
+  createCategory('S', [
     { unicode: 'U015a', char: 'Ś', alternatives: ["'S"], description: 'LATIN CAPITAL LETTER S WITH ACUTE' },
     { unicode: 'U015b', char: 'ś', alternatives: ["'s"], description: 'LATIN SMALL LETTER S WITH ACUTE' },
     { unicode: 'U015c', char: 'Ŝ', alternatives: ['^S'], description: 'LATIN CAPITAL LETTER S WITH CIRCUMFLEX' },
@@ -213,8 +213,8 @@ export const categories: Category[] = [
     { unicode: 'U0160', char: 'Š', alternatives: ['cS'], description: 'LATIN CAPITAL LETTER S WITH CARON' },
     { unicode: 'U0161', char: 'š', alternatives: ['cs'], description: 'LATIN SMALL LETTER S WITH CARON' },
     { unicode: 'U017f', char: 'ſ', alternatives: ['fs', 'fS'], description: 'LATIN SMALL LETTER LONG S' },
-
-    // T letters
+  ]),
+  createCategory('T', [
     { unicode: 'U0162', char: 'Ţ', alternatives: [',T'], description: 'LATIN CAPITAL LETTER T WITH CEDILLA' },
     { unicode: 'U0163', char: 'ţ', alternatives: [',t'], description: 'LATIN SMALL LETTER T WITH CEDILLA' },
     { unicode: 'U0164', char: 'Ť', alternatives: ['cT'], description: 'LATIN CAPITAL LETTER T WITH CARON' },
@@ -222,8 +222,8 @@ export const categories: Category[] = [
     { unicode: 'U0166', char: 'Ŧ', alternatives: ['/T'], description: 'LATIN CAPITAL LETTER T WITH STROKE' },
     { unicode: 'U0167', char: 'ŧ', alternatives: ['/t'], description: 'LATIN SMALL LETTER T WITH STROKE' },
     { unicode: 'U1e97', char: 'ẗ', alternatives: ['"t'], description: 'LATIN SMALL LETTER T WITH DIAERESIS' },
-
-    // U letters
+  ]),
+  createCategory('U', [
     { unicode: 'U00d9', char: 'Ù', alternatives: ['`U'], description: 'LATIN CAPITAL LETTER U WITH GRAVE' },
     { unicode: 'U00da', char: 'Ú', alternatives: ["'U"], description: 'LATIN CAPITAL LETTER U WITH ACUTE' },
     { unicode: 'U00db', char: 'Û', alternatives: ['^U'], description: 'LATIN CAPITAL LETTER U WITH CIRCUMFLEX' },
@@ -246,12 +246,12 @@ export const categories: Category[] = [
     { unicode: 'U0173', char: 'ų', alternatives: [';u'], description: 'LATIN SMALL LETTER U WITH OGONEK' },
     { unicode: 'U01d3', char: 'Ǔ', alternatives: ['cU'], description: 'LATIN CAPITAL LETTER U WITH CARON' },
     { unicode: 'U01d4', char: 'ǔ', alternatives: ['cu'], description: 'LATIN SMALL LETTER U WITH CARON' },
-
-    // V letters
+  ]),
+  createCategory('V', [
     { unicode: 'U1e7c', char: 'Ṽ', alternatives: ['~V'], description: 'LATIN CAPITAL LETTER V WITH TILDE' },
     { unicode: 'U1e7d', char: 'ṽ', alternatives: ['~v'], description: 'LATIN SMALL LETTER V WITH TILDE' },
-
-    // W letters
+  ]),
+  createCategory('W', [
     { unicode: 'U0174', char: 'Ŵ', alternatives: ['^W'], description: 'LATIN CAPITAL LETTER W WITH CIRCUMFLEX' },
     { unicode: 'U0175', char: 'ŵ', alternatives: ['^w'], description: 'LATIN SMALL LETTER W WITH CIRCUMFLEX' },
     { unicode: 'U1e80', char: 'Ẁ', alternatives: ['`W'], description: 'LATIN CAPITAL LETTER W WITH GRAVE' },
@@ -261,12 +261,12 @@ export const categories: Category[] = [
     { unicode: 'U1e84', char: 'Ẅ', alternatives: ['"W'], description: 'LATIN CAPITAL LETTER W WITH DIAERESIS' },
     { unicode: 'U1e85', char: 'ẅ', alternatives: ['"w'], description: 'LATIN SMALL LETTER W WITH DIAERESIS' },
     { unicode: 'U1e98', char: 'ẘ', alternatives: ['ow'], description: 'LATIN SMALL LETTER W WITH RING ABOVE' },
-
-    // X letters
+  ]),
+  createCategory('X', [
     { unicode: 'U1e8c', char: 'Ẍ', alternatives: ['"X'], description: 'LATIN CAPITAL LETTER X WITH DIAERESIS' },
     { unicode: 'U1e8d', char: 'ẍ', alternatives: ['"x'], description: 'LATIN SMALL LETTER X WITH DIAERESIS' },
-
-    // Y letters
+  ]),
+  createCategory('Y', [
     { unicode: 'U00dd', char: 'Ý', alternatives: ["'Y"], description: 'LATIN CAPITAL LETTER Y WITH ACUTE' },
     { unicode: 'U00fd', char: 'ý', alternatives: ["'y"], description: 'LATIN SMALL LETTER Y WITH ACUTE' },
     { unicode: 'U00ff', char: 'ÿ', alternatives: ['"y'], description: 'LATIN SMALL LETTER Y WITH DIAERESIS' },
@@ -280,8 +280,8 @@ export const categories: Category[] = [
     { unicode: 'U1ef3', char: 'ỳ', alternatives: ['`y'], description: 'LATIN SMALL LETTER Y WITH GRAVE' },
     { unicode: 'U1ef8', char: 'Ỹ', alternatives: ['~Y'], description: 'LATIN CAPITAL LETTER Y WITH TILDE' },
     { unicode: 'U1ef9', char: 'ỹ', alternatives: ['~y'], description: 'LATIN SMALL LETTER Y WITH TILDE' },
-
-    // Z letters
+  ]),
+  createCategory('Z', [
     { unicode: 'U0179', char: 'Ź', alternatives: ["'Z"], description: 'LATIN CAPITAL LETTER Z WITH ACUTE' },
     { unicode: 'U017a', char: 'ź', alternatives: ["'z"], description: 'LATIN SMALL LETTER Z WITH ACUTE' },
     { unicode: 'U017d', char: 'Ž', alternatives: ['cZ'], description: 'LATIN CAPITAL LETTER Z WITH CARON' },
@@ -290,8 +290,8 @@ export const categories: Category[] = [
     { unicode: 'U01b6', char: 'ƶ', alternatives: ['/z'], description: 'LATIN SMALL LETTER Z WITH STROKE' },
     { unicode: 'U1e90', char: 'Ẑ', alternatives: ['^Z'], description: 'LATIN CAPITAL LETTER Z WITH CIRCUMFLEX' },
     { unicode: 'U1e91', char: 'ẑ', alternatives: ['^z'], description: 'LATIN SMALL LETTER Z WITH CIRCUMFLEX' },
-
-    // Other special letters
+  ]),
+  createCategory('Other Special Letters', [
     { unicode: 'U0180', char: 'ƀ', alternatives: ['/b'], description: 'LATIN SMALL LETTER B WITH STROKE' },
     { unicode: 'U0197', char: 'Ɨ', alternatives: ['/I'], description: 'LATIN CAPITAL LETTER I WITH STROKE' },
     { unicode: 'U0259', char: 'ə', alternatives: ['ee'], description: 'LATIN SMALL LETTER SCHWA' },
