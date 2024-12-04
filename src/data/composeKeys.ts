@@ -12,7 +12,6 @@ const createCategory = (name: string, keys: any[]): Category => ({
 
 export const categories: Category[] = [
   createCategory('A', [
-    // A letters
     { unicode: 'U00c0', char: 'À', alternatives: ['`A'], description: 'LATIN CAPITAL LETTER A WITH GRAVE' },
     { unicode: 'U00c1', char: 'Á', alternatives: ["'A"], description: 'LATIN CAPITAL LETTER A WITH ACUTE' },
     { unicode: 'U00c2', char: 'Â', alternatives: ['^A'], description: 'LATIN CAPITAL LETTER A WITH CIRCUMFLEX' },
